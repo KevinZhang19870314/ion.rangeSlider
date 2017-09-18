@@ -1394,11 +1394,11 @@
 
                 this.drawLabels();
 
-                this.$cache.barLeft[0].style.left = this.coords.p_handle / 2 + "%";
+                this.$cache.barLeft[0].style.left = "calc(" + this.coords.p_bar_x + "% + 7px)";
                 this.$cache.barLeft[0].style.width = this.coords.p_bar_x + "%";
                 this.$cache.bar[0].style.left = this.coords.p_bar_x + "%";
                 this.$cache.bar[0].style.width = this.coords.p_bar_w + "%";
-                this.$cache.barRight[0].style.width = 100 - this.coords.p_bar_x - this.coords.p_bar_w - this.coords.p_handle / 2 + "%";
+                this.$cache.barRight[0].style.width = "calc(" + (100 - this.coords.p_bar_x - this.coords.p_bar_w - this.coords.p_handle / 2) + "% + 20px)";
 
                 if (this.options.type === "single") {
                     this.$cache.s_single[0].style.left = this.coords.p_single_fake + "%";
